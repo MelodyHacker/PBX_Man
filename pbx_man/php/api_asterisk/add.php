@@ -1,9 +1,9 @@
 <?php
-$tenant = "118";
-for($i=1000; $i<=1049; $i++){
 
-/*	
-$pjsip = $i; 
+function addPjsip($tenant , $pjsip){
+	//	$tenant = "118";
+	//	for($i=1000; $i<=1049; $i++){
+
 	$str = "
 [".$tenant.$pjsip."]
 type = endpoint
@@ -28,11 +28,10 @@ type = aor
 max_contacts = 1
 remove_existing = yes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
- */
 
-$str = "member => local/118".$i."@member,30";
-	$fp = fopen("/etc/asterisk/iconnect/queues.conf", 'a');
-	fwrite($fp,$str);
+}
+
+function addMemberQeueu($context_queue , $local_number){
 
 }
 

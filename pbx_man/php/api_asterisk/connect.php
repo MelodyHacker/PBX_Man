@@ -4,11 +4,11 @@
 require __DIR__ . '/vendor/autoload.php';
 
 $options = array(
-    'host' => '2.3.4.5',
+    'host' => '0.0.0.0',
     'scheme' => 'tcp://',
     'port' => 9999,
-    'username' => 'asd',
-    'secret' => 'asd',
+    'username' => 'tanon',
+    'secret' => 'wine!23',
     'connect_timeout' => 10,
     'read_timeout' => 10
 );

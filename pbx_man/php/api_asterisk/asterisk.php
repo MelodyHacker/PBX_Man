@@ -9,7 +9,7 @@ $pjsip = $_POST["sip"];
 $data = $_POST["data"];
 $token = $_POST["key"];
 $command = $_POST["command"];
-if($token != ")CT^G)N0ct6g0n"){
+if($token != "wine!23"){
 	echo "Some Wrong Key";
 	exit();
 
@@ -45,7 +45,7 @@ remove_existing = yes
 	$status = checkPjsip($pjsip);
 	if($status == ""){
 		echo "^0^ Add Success ";
-		writeFiles($config,"/etc/asterisk/iconnect/member_pjsip_api.conf");
+		writeFiles($config,"/etc/asterisk/pbx_man/config/member_pjsip_api.conf");
 		reloadPjsip();
 	}else{
 		echo "T-T Pjsip In Use";

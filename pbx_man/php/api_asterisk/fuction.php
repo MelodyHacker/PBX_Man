@@ -4,7 +4,7 @@ function checkPjsip($sip){
 	$session_file = rand();
 	$status = "";
 
-	exec("cat /etc/asterisk/iconnect/pjsip.conf |grep usernam > /var/www/html/dev/log/member_" . $session_file);
+	exec("cat /etc/asterisk/pbx_man/config/pjsip.conf |grep usernam > /var/www/html/dev/log/member_" . $session_file);
 	exec("cat /etc/asterisk/iconnect/member_pjsip_api.conf |grep username >> /var/www/html/dev/log/member_" . $session_file);
 	$ar_data = readFiles("/var/www/html/dev/log/member_" . $session_file);		
 	exec("rm /var/www/html/dev/log/member_" . $session_file);	
@@ -22,8 +22,8 @@ function reloadPjsip(){
 
 	$socket = fsockopen("localhost","5038", $errno, $errstr, 10);
 	fputs($socket, "Action:Login\r\n");
-	fputs($socket, "UserName:iconnect\r\n");
-	fputs($socket, "Secret:)CT^G)N0ct6g0n\r\n\r\n");
+	fputs($socket, "UserName:tanon\r\n");
+	fputs($socket, "Secret:wine!23\r\n\r\n");
 	fputs($socket, "Action: Command\r\n");
 	fputs($socket, "Command: pjsip reload\r\n");
 	fputs($socket, "Action: Logoff\r\n\r\n");
